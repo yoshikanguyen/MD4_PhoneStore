@@ -91,7 +91,6 @@ public class InvoiceController {
         BigDecimal totalAmount = product.getPrice().multiply(BigDecimal.valueOf(quantity));
         invoice.setTotalAmount(totalAmount);
 
-        // Tạo InvoiceDetail
         InvoiceDetail detail = new InvoiceDetail();
         detail.setInvoice(invoice);
         detail.setProduct(product);

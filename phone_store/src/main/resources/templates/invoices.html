@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <title>Phone Store - Invoices</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 </head>
 <body class="bg-light">
 
 <div class="container my-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="text-dark fw-bold mb-0">Quản Lý Đơn Hàng</h2>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInvoiceModal">
-            Thêm mới đơn hàng
-        </button>
+
+        <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInvoiceModal">
+                Add cart
+            </button>
+
+            <form th:action="@{/logout}" method="post" class="d-inline mb-0">
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+        </div>
     </div>
 
     <div class="card mb-4 shadow-sm">
